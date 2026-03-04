@@ -12,9 +12,9 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 BOT_TOKEN = "8320997575:AAGksXlKLjd-DOAi-DdPOh39gPKFiJxu9ao"
-ADMIN_ID = 7011937754
-ADMINS = [7011937754]
-DEFAULT_SMS_API = "https://api-node-js-new-production-b09a.up.railway.type=sms"
+ADMIN_ID = 7078723346
+ADMINS = [7078723346]
+DEFAULT_SMS_API = "https://api-node-js-new-production-b09a.up.railway=sms"
 
 # =================== IN-MEMORY STORAGE ===================
 
@@ -452,7 +452,6 @@ def build_force_join_message(not_joined):
     text += "You must join the following channels to use this bot:\n\n"
     buttons = []
     for ch in not_joined:
-        text += f"\u2022 <b>{ch['title']}</b>\n"
         username = ch["channel_username"].replace("@", "")
         buttons.append([InlineKeyboardButton(f"\U0001f4e2 Join {ch['title']}", url=f"https://t.me/{username}")])
     text += "\nAfter joining, tap the button below:"
